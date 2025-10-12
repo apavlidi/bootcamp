@@ -27,7 +27,7 @@ const Subscribe = () => {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name })g,
+        body: JSON.stringify({ email, name }),
       });
 
       const data = await res.json();
