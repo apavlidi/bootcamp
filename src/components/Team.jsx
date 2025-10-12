@@ -10,12 +10,12 @@ const teamMembers = [
   {
     name: 'Kostikas Visnia',
     description: 'An industry expert with a passion for building powerful personal brands for aspiring developers.',
-    imgReplace: 'A smiling woman with glasses in a professional setting'
+    imageUrl: '/assets/kostikas.jpeg'
   },
   {
     name: 'Vasilis Samoladas',
     description: 'A seasoned developer focused on teaching practical skills and real-world execution.',
-    imgReplace: 'A man in a casual shirt smiling confidently'
+    imageUrl: '/assets/sam.jpeg'
   }
 ];
 
