@@ -11,7 +11,7 @@ const Subscribe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!email || !name) {
       toast({
         title: "Missing Information",
@@ -23,10 +23,18 @@ const Subscribe = () => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      const subscribers = JSON.parse(localStorage.getItem('subscribers') || '[]');
-      subscribers.push({ name, email, timestamp: new Date().toISOString() });
-      localStorage.setItem('subscribers', JSON.stringify(subscribers));
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, name })g,
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data?.error || 'Subscription failed');
+      }
 
       toast({
         title: "✅ You're on the list!",
@@ -35,8 +43,15 @@ const Subscribe = () => {
 
       setEmail('');
       setName('');
+    } catch (err) {
+      toast({
+        title: "Subscription failed",
+        description: err.message || "Please try again in a moment.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -53,12 +68,12 @@ const Subscribe = () => {
           <p className="text-lg text-muted-foreground mb-8">Be the first to know when we launch.</p>
         </motion.div>
 
-        <motion.form 
+        <motion.form
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          onSubmit={handleSubmit} 
+          onSubmit={handleSubmit}
           className="space-y-4"
         >
           <div>
@@ -70,7 +85,7 @@ const Subscribe = () => {
               className="w-full px-5 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-smooth"
             />
           </div>
-          
+
           <div>
             <input
               type="email"
