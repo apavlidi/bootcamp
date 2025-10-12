@@ -1,0 +1,49 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite
+dist/
+dist-ssr/
+.vite/
+
+# Local env
+.env
+.env.*
+!.env.example
+
+# Editor folders
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Build artifacts
+*.local
+*.cache
+.cache/
+*.out
+*.zip
+
+# TypeScript build
+*.tsbuildinfo
+
+# Vercel / deployment
+.vercel/
+
+# Coverage reports
+coverage/
+
+# Optional: temporary files
+tmp/
+temp/
+
+/dist/*
