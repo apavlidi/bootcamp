@@ -16,6 +16,11 @@ export default async function handler(req, res) {
   const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID
 
   if (!API_KEY || !API_SERVER || !AUDIENCE_ID) {
+    console.log('ENV CHECK', {
+  key: !!process.env.MAILCHIMP_API_KEY,
+  server: !!process.env.MAILCHIMP_API_SERVER,
+  audience: !!process.env.MAILCHIMP_AUDIENCE_ID,
+})
     return res.status(500).json({ error: 'Missing Mailchimp env vars' })
   }
 
