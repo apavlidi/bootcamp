@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 
 const teamMembers = [
   {
-    name: 'Team Member 1',
+    name: 'Alexis Pavlidis',
     description: 'The visionary founder, dedicated to mentoring the next generation of tech talent in Greece.',
-    imageUrl: 'https://images.unsplash.com/photo-1603991414220-51b87b89a371?ixlib=rb-4.0.3&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200'
+    imageUrl: './assets/alex.jpeg'
   },
   {
-    name: 'Team Member 2',
+    name: 'Kostikas Visnia',
     description: 'An industry expert with a passion for building powerful personal brands for aspiring developers.',
     imgReplace: 'A smiling woman with glasses in a professional setting'
   },
   {
-    name: 'Team Member 3',
+    name: 'Vasilis Samoladas',
     description: 'A seasoned developer focused on teaching practical skills and real-world execution.',
     imgReplace: 'A man in a casual shirt smiling confidently'
   }
