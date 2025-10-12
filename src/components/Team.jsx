@@ -5,7 +5,7 @@ const teamMembers = [
   {
     name: 'Alexis Pavlidis',
     description: 'The visionary founder, dedicated to mentoring the next generation of tech talent in Greece.',
-    imageUrl: 'assets/alex.jpeg'
+    imageUrl: '/assets/alex.jpeg'
   },
   {
     name: 'Kostikas Visnia',
