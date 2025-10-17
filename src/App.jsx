@@ -8,6 +8,9 @@ import Pillars from '@/components/Pillars';
 import Subscribe from '@/components/Subscribe';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import ComingSoon from "@/components/ComingSoon";
+import WhyDifferent from "@/components/WhyDifferent";
+
 
 function App() {
   return (
@@ -23,7 +26,9 @@ function App() {
           <Hero />
           <Vision />
           <Pillars />
+          <WhyDifferent />
           <Team />
+          <ComingSoon />
           <Subscribe />
         </main>
         <Footer />

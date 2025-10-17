@@ -1,68 +1,61 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Users, Sparkles, Zap, TrendingUp } from 'lucide-react';
+import { Users, Award, Briefcase, TrendingUp } from "lucide-react";
+
+const pillars = [
+  {
+    icon: Users,
+    title: "Mentorship & Career Coaching",
+    description: "Get personalized guidance from industry professionals who've been in your shoes and know what it takes to succeed.",
+  },
+  {
+    icon: Award,
+    title: "Branding",
+    description: "Build a compelling professional brand that stands out to employers and showcases your unique value in the tech industry.",
+  },
+  {
+    icon: Briefcase,
+    title: "How to Work / Execute",
+    description: "Learn the practical skills and work methodologies that tech companies actually use in their day-to-day operations.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Expectations of Industry",
+    description: "Understand what tech companies really look for and what it takes to thrive in a fast-paced professional environment.",
+  },
+];
 
 const Pillars = () => {
-  const pillars = [
-    {
-      icon: Users,
-      title: 'Mentorship & career coaching',
-      description: 'Get personalized guidance from industry professionals who have walked the path you\'re on.'
-    },
-    {
-      icon: Sparkles,
-      title: 'Branding',
-      description: 'Build a powerful personal brand that makes you stand out in the competitive tech landscape.'
-    },
-    {
-      icon: Zap,
-      title: 'How to work / execute',
-      description: 'Master the practical skills and workflows that separate great developers from the rest.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Expectations of Industry',
-      description: 'Understand what companies really want and how to exceed their expectations from day one.'
-    }
-  ];
-
   return (
-    <section className="py-24 sm:py-32 px-4 bg-muted/50">
-      <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">The 4 Pillars</h2>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="py-20 px-4 bg-gradient-card">
+      <div className="container mx-auto">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+            The 4 Non-Negotiable Pillars
+          </h2>
+          <p className="text-xl font-semibold text-foreground max-w-3xl mx-auto mb-3">
+            Master these four pillars, and you'll have everything you need to land your dream tech job.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            No degree required. No shortcuts. Just the exact skills and mindset that top companies demand.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex flex-col items-start p-8 border border-border rounded-2xl bg-card transition-smooth hover:border-primary/50 hover:shadow-card"
+                className="group p-8 rounded-lg border border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-card-colored transition-all duration-300 hover:-translate-y-1 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-                  <Icon className="w-6 h-6 text-primary" />
+                <div className="w-14 h-14 rounded-lg bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon className="w-7 h-7 text-primary-foreground" />
                 </div>
-                
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  {pillar.title}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 className="text-2xl font-semibold mb-3 text-foreground">{pillar.title}</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
                   {pillar.description}
                 </p>
-              </motion.div>
+              </div>
             );
           })}
         </div>
