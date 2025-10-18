@@ -19,11 +19,20 @@ const Hero = () => {
           TechBridge
         </motion.h1>
 
+   <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto font-medium"
+        >
+          We want anyone in Greece with a laptop and passion to land their dream tech job—without an engineering degree.
+        </motion.p>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-muted-foreground mb-12 font-medium"
+          className="text-lg md:text-xl text-muted-foreground mb-8 italic"
         >
           Bridge the gap between university and industry.
         </motion.p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Code2, Users } from "lucide-react";
 
 const teamMembers = [
   {
@@ -30,7 +31,19 @@ const Team = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">Who we are</h2>
+          <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <Users className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Our Team</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
+            Meet The Team
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            We're a group of passionate professionals dedicated to transforming tech education in Greece
+          </p>
+        </div>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

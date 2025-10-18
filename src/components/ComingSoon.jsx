@@ -43,7 +43,7 @@ const ComingSoon = () => {
         </button>
 
         <p className="mt-6 text-sm text-muted-foreground animate-fade-in">
-          Early subscribers get priority access and special launch pricing
+          Early subscribers get priority access.
         </p>
       </div>
     </section>

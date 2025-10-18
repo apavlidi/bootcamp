@@ -4,31 +4,31 @@ const differentiators = [
   {
     icon: Users,
     title: "Built by Engineers, Not Just Educators",
-    description: "Our team consists of working engineers from top tech companies (Monzo, Dynatrace, Kiwi). We know what it takes to get hired and succeed because we live it every day."
+    description: "Our team consists of working engineers from top tech companies. We know what it takes to get hired because we live it every day."
   },
   {
     icon: Target,
     title: "Validated Through Real Research",
-    description: "We didn't just guess what you need. We've interviewed 60+ aspiring developers in Greece, completed 21 in-depth interviews, and designed our program around your actual pain points."
+    description: "We didn't just guess what you need. We've interviewed 100+ aspiring developers in Greece and designed our program around your actual pain points."
   },
   {
     icon: CheckCircle,
     title: "Focus on One Thing: Getting You Hired",
-    description: "Unlike broad bootcamps, we focus narrowly on the gap between 'I can code' and 'I got hired.' We teach what universities miss: interviewing, branding, execution, and industry expectations."
+    description: "Bridge the gap from 'I can code' to 'I got hired.' We teach what universities miss."
   },
   {
     icon: Lightbulb,
     title: "Structure + Community + Mentorship",
-    description: "You're not learning alone from random YouTube videos. You get a structured path, real mentorship from industry professionals, and a community of peers on the same journey."
+    description: "Structured path, industry mentorship, and peer community. No more random tutorials."
   }
 ];
 
 const WhyDifferent = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-subtle">
+    <section className="pt-20 pb-8 px-4 bg-gradient-subtle">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent pb-2">
             Why We're Different
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ const WhyDifferent = () => {
             We've Done the Homework—So You Don't Have To
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We've interviewed 60+ aspiring developers in Greece and analyzed exactly what stands between 
+            We've interviewed 100+ aspiring developers in Greece and analyzed exactly what stands between 
             you and your first tech job. This isn't theory—it's a validated roadmap built on real insights 
             from people just like you.
           </p>
