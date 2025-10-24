@@ -10,7 +10,7 @@ import Header from "../components/Header";
 const Index = () => {
   return (
     <div className="min-h-screen">
-                <Header />
+      <Header />
       <Hero />
       {/* <Vision/> */}
       <Pillars />
@@ -21,7 +21,7 @@ const Index = () => {
       
       <footer className="py-8 px-4 border-t border-border/50 text-center text-muted-foreground">
         <p className="text-sm">
-          © {new Date().getFullYear()} TechBridge. Bridging the gap between university and industry.
+          © {new Date().getFullYear()} DevReady. Bridging the gap between university and industry.
         </p>
       </footer>
     </div>

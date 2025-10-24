@@ -22,7 +22,7 @@ const Header = () => {
             transition={{ duration: 0.5 }}
           >
             <a href="/" className="text-2xl font-bold text-foreground">
-              TechBridge
+              DevReady
             </a>
           </motion.div>
         </div>
