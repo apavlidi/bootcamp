@@ -5,17 +5,17 @@ import { Code2, Users } from "lucide-react";
 const teamMembers = [
   {
     name: 'Alexis Pavlidis',
-    description: 'The visionary founder, dedicated to mentoring the next generation of tech talent in Greece.',
+    description: 'TBD',
     imageUrl: '/assets/alex.jpeg'
   },
   {
     name: 'Kostikas Visnia',
-    description: 'An industry expert with a passion for building powerful personal brands for aspiring developers.',
+    description: 'TBD',
     imageUrl: '/assets/kostikas.jpeg'
   },
   {
     name: 'Vasilis Samoladas',
-    description: 'A seasoned developer focused on teaching practical skills and real-world execution.',
+    description: 'TBD',
     imageUrl: '/assets/sam.jpeg'
   }
 ];
